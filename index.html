@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Manto Store — Catálogo</title>
+<meta name="description" content="Catálogo oficial da Manto Store">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#080808;color:#f5f5f5;font-family:Arial,Helvetica,sans-serif}
+header{padding:28px 18px;text-align:center;border-bottom:1px solid #292929;background:linear-gradient(180deg,#141414,#080808)}
+.logo{font-weight:900;font-size:38px;letter-spacing:4px;background:linear-gradient(90deg,#fff,#d4af37,#fff);-webkit-background-clip:text;color:transparent}
+.sub{color:#aaa;letter-spacing:2px;font-size:12px;margin-top:6px}
+nav{display:flex;gap:10px;overflow:auto;padding:14px;position:sticky;top:0;background:#090909ee;backdrop-filter:blur(10px);z-index:5}
+nav button{white-space:nowrap;background:#151515;border:1px solid #333;color:#ddd;border-radius:20px;padding:10px 15px;cursor:pointer}
+nav button.active,nav button:hover{border-color:#d4af37;color:#d4af37}
+main{max-width:1180px;margin:auto;padding:22px 16px}
+.hero{border:1px solid #292929;border-radius:18px;padding:28px;background:radial-gradient(circle at 50% 0,#2b2410,#101010 45%,#090909);text-align:center}
+.hero h1{margin:0 0 8px;font-size:clamp(30px,6vw,58px)}
+.hero p{color:#aaa;margin:0}
+.search{width:100%;margin:18px 0;padding:14px 16px;border-radius:12px;border:1px solid #333;background:#111;color:#fff;font-size:16px}
+.section-title{display:flex;justify-content:space-between;align-items:end;margin:28px 0 14px}
+.section-title h2{margin:0}.count{color:#888;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.card{background:#111;border:1px solid #292929;border-radius:15px;overflow:hidden}
+.photo{height:245px;background:linear-gradient(135deg,#181818,#0d0d0d);display:flex;align-items:center;justify-content:center;color:#777}
+.photo img{width:100%;height:100%;object-fit:cover}
+.info{padding:14px}.team{font-weight:800}.type{font-size:13px;color:#aaa;margin-top:5px}.tag{display:inline-block;margin-top:10px;padding:5px 8px;border:1px solid #806b27;border-radius:10px;color:#d4af37;font-size:11px}
+footer{text-align:center;color:#666;border-top:1px solid #222;padding:28px;margin-top:40px;font-size:12px}
+@media(max-width:600px){.logo{font-size:29px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.photo{height:210px}.info{padding:11px}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">MANTO STORE</div>
+<div class="sub">CAMISAS • FUTEBOL • PAIXÃO</div>
+</header>
+<nav id="nav"></nav>
+<main>
+<section class="hero">
+<h1>Vista sua paixão.</h1>
+<p>Explore camisas brasileiras, europeias, seleções e modelos retrô.</p>
+</section>
+<input id="search" class="search" placeholder="🔎 Buscar time ou modelo...">
+<div class="section-title"><h2 id="title">Destaques</h2><span class="count" id="count"></span></div>
+<div id="grid" class="grid"></div>
+<footer>MANTO STORE • Catálogo digital<br>Imagens e disponibilidade devem ser conferidas antes da publicação comercial.</footer>
+</main>
+<script>
+const cats={
+"Destaques":"destaques","🇧🇷 Brasil":"brasil","🇪🇺 Europa":"europa","🌏 Ásia":"asia","🌎 América do Sul":"sul","🌍 Seleções":"selecoes","🕰️ Retrôs":"retros"
+};
+const products=[
+["Flamengo","Home 2026","brasil","Atual"],
+["Palmeiras","Home 2026","brasil","Atual"],
+["Corinthians","Home 2026","brasil","Atual"],
+["São Paulo","Home 2026","brasil","Atual"],
+["Atlético-MG","Home 2026","brasil","Atual"],
+["Cruzeiro","Home 2026","brasil","Atual"],
+["Grêmio","Home 2026","brasil","Atual"],
+["Internacional","Home 2026","brasil","Atual"],
+["Botafogo","Home 2026","brasil","Atual"],
+["Fluminense","Home 2026","brasil","Atual"],
+["Vasco","Home 2026","brasil","Atual"],
+["Santos","Home 2026","brasil","Atual"],
+["Manchester United","Home","europa","Premier League"],
+["Manchester City","Home","europa","Premier League"],
+["Liverpool","Home","europa","Premier League"],
+["Arsenal","Home","europa","Premier League"],
+["Chelsea","Home","europa","Premier League"],
+["Real Madrid","Home","europa","La Liga"],
+["Barcelona","Home","europa","La Liga"],
+["Atlético de Madrid","Home","europa","La Liga"],
+["Juventus","Home","europa","Serie A"],
+["Inter de Milão","Home","europa","Serie A"],
+["Milan","Home","europa","Serie A"],
+["Bayern de Munique","Home","europa","Bundesliga"],
+["Borussia Dortmund","Home","europa","Bundesliga"],
+["PSG","Home","europa","Ligue 1"],
+["Olympique de Marseille","Home","europa","Ligue 1"],
+["Al-Hilal","Home","asia","Arábia Saudita"],
+["Al-Nassr","Home","asia","Arábia Saudita"],
+["Urawa Red Diamonds","Home","asia","Japão"],
+["Kashima Antlers","Home","asia","Japão"],
+["Boca Juniors","Home","sul","Argentina"],
+["River Plate","Home","sul","Argentina"],
+["Racing Club","Home","sul","Argentina"],
+["Independiente","Home","sul","Argentina"],
+["Peñarol","Home","sul","Uruguai"],
+["Nacional","Home","sul","Uruguai"],
+["Brasil","Home 2026","selecoes","Seleção"],
+["Argentina","Home 2026","selecoes","Seleção"],
+["França","Home 2026","selecoes","Seleção"],
+["Inglaterra","Home 2026","selecoes","Seleção"],
+["Espanha","Home 2026","selecoes","Seleção"],
+["Alemanha","Home 2026","selecoes","Seleção"],
+["Portugal","Home 2026","selecoes","Seleção"],
+["Itália","Home 2026","selecoes","Seleção"],
+["México","Home 2026","selecoes","Seleção"],
+["Japão","Home 2026","selecoes","Seleção"],
+["Brasil","Retrô 1994","retros","Retrô"],
+["Argentina","Retrô 1986","retros","Retrô"],
+["França","Retrô","retros","Retrô"],
+["Itália","Retrô","retros","Retrô"],
+["Real Madrid","Retrô","retros","Retrô"],
+["Barcelona","Retrô","retros","Retrô"],
+["Manchester United","Retrô","retros","Retrô"]
+];
+let active="destaques";
+const nav=document.getElementById("nav"),grid=document.getElementById("grid"),title=document.getElementById("title"),count=document.getElementById("count"),search=document.getElementById("search");
+Object.entries(cats).forEach(([label,key])=>{let b=document.createElement("button");b.textContent=label;b.onclick=()=>{active=key;document.querySelectorAll("nav button").forEach(x=>x.classList.remove("active"));b.classList.add("active");render()};nav.appendChild(b)});
+nav.firstChild.classList.add("active");
+function render(){
+let q=search.value.toLowerCase();
+let arr=products.filter(p=>(active==="destaques"||p[2]===active)&&p.join(" ").toLowerCase().includes(q));
+title.textContent=Object.keys(cats).find(k=>cats[k]===active)||"Catálogo";
+count.textContent=arr.length+" modelos";
+grid.innerHTML=arr.map(p=>`<article class="card"><div class="photo">FOTO<br>DO PRODUTO</div><div class="info"><div class="team">${p[0]}</div><div class="type">${p[1]}</div><span class="tag">${p[3]}</span></div></article>`).join("");
+}
+search.oninput=render;render();
+</script>
+</body></html>
