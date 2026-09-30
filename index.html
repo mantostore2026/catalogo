@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Manto Store • Catálogo 2026/27</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#101010;color:#fff;font-family:Arial,Helvetica,sans-serif}
+header{padding:20px 5%;border-bottom:1px solid #2a2a2a;background:#0b0b0b;position:sticky;top:0;z-index:10}
+.brand{display:flex;align-items:center;gap:14px}
+.mark{width:46px;height:46px;border:2px solid #d8b34b;border-radius:12px;display:grid;place-items:center;color:#d8b34b;font-weight:900;font-size:24px}
+h1{font-size:24px;margin:0} .sub{color:#aaa;font-size:11px;letter-spacing:2px;margin-top:3px}
+.tabs{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
+.tab{border:1px solid #333;background:#171717;color:#ccc;border-radius:10px;padding:10px 18px;font-weight:700;cursor:pointer}
+.tab.active{background:#d8b34b;color:#111;border-color:#d8b34b}
+main{padding:28px 5%}
+.topline{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:22px}
+h2{margin:0;font-size:26px} .count{color:#d8b34b;font-weight:700}
+.search{margin:0 0 20px;width:100%;max-width:430px;background:#181818;border:1px solid #333;color:#fff;border-radius:10px;padding:12px 14px;outline:none}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#181818;border:1px solid #292929;border-radius:14px;overflow:hidden}
+.photo{height:330px;background:#f0f0f0;display:flex;align-items:center;justify-content:center}
+.photo img{width:100%;height:100%;object-fit:contain}
+.info{padding:14px} .info strong{display:block;font-size:17px} .info span{display:block;color:#999;font-size:12px;margin-top:5px}
+.section{display:none} .section.active{display:block}
+footer{padding:24px 5%;color:#777;border-top:1px solid #292929;font-size:12px}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr);gap:10px}.photo{height:250px}h2{font-size:20px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="mark">M</div>
+    <div><h1>MANTO STORE</h1><div class="sub">CAMISAS • FUTEBOL • PAIXÃO</div></div>
+  </div>
+  <div class="tabs">
+    <button class="tab active" data-target="brasileirao">Brasileirão</button>
+    <button class="tab" data-target="europeus">Europeus</button>
+  </div>
+</header>
+
+<main>
+  <section id="brasileirao" class="section active">
+    <div class="topline"><h2>Brasileirão • Catálogo</h2><div class="count">40 camisas • ordem alfabética</div></div>
+    <input class="search" data-search="brasileirao" placeholder="Pesquisar time...">
+    <div class="grid">
+      <article class="card" data-team="athletico-pr">
+        <div class="photo"><img src="images/01-athletico-pr-uniforme-1-26-27.jpg" alt="Athletico-PR — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Athletico-PR</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="athletico-pr">
+        <div class="photo"><img src="images/01-athletico-pr-modelo-2-2026.jpg" alt="Athletico-PR — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Athletico-PR</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="atlético-mg">
+        <div class="photo"><img src="images/02-atletico-mg-uniforme-1-26-27.jpg" alt="Atlético-MG — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Atlético-MG</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="atlético-mg">
+        <div class="photo"><img src="images/02-atletico-mg-modelo-2-2026.jpg" alt="Atlético-MG — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Atlético-MG</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="bahia">
+        <div class="photo"><img src="images/03-bahia-uniforme-1-26-27.jpg" alt="Bahia — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Bahia</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="bahia">
+        <div class="photo"><img src="images/03-bahia-modelo-2-2026.jpg" alt="Bahia — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Bahia</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="botafogo">
+        <div class="photo"><img src="images/04-botafogo-uniforme-1-26-27.jpg" alt="Botafogo — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Botafogo</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="botafogo">
+        <div class="photo"><img src="images/04-botafogo-modelo-2-2026.jpg" alt="Botafogo — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Botafogo</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="chapecoense">
+        <div class="photo"><img src="images/05-chapecoense-uniforme-1-26-27.jpg" alt="Chapecoense — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Chapecoense</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="chapecoense">
+        <div class="photo"><img src="images/05-chapecoense-modelo-2-2026.jpg" alt="Chapecoense — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Chapecoense</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="corinthians">
+        <div class="photo"><img src="images/06-corinthians-uniforme-1-26-27.jpg" alt="Corinthians — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Corinthians</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="corinthians">
+        <div class="photo"><img src="images/06-corinthians-modelo-2-2026.jpg" alt="Corinthians — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Corinthians</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="coritiba">
+        <div class="photo"><img src="images/07-coritiba-uniforme-1-26-27.jpg" alt="Coritiba — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Coritiba</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="coritiba">
+        <div class="photo"><img src="images/07-coritiba-modelo-2-2026.jpg" alt="Coritiba — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Coritiba</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="cruzeiro">
+        <div class="photo"><img src="images/08-cruzeiro-uniforme-1-26-27.jpg" alt="Cruzeiro — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Cruzeiro</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="cruzeiro">
+        <div class="photo"><img src="images/08-cruzeiro-modelo-2-2026.jpg" alt="Cruzeiro — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Cruzeiro</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="flamengo">
+        <div class="photo"><img src="images/09-flamengo-uniforme-1-26-27.jpg" alt="Flamengo — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Flamengo</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="flamengo">
+        <div class="photo"><img src="images/09-flamengo-modelo-2-2026.jpg" alt="Flamengo — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Flamengo</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="fluminense">
+        <div class="photo"><img src="images/10-fluminense-uniforme-1-26-27.jpg" alt="Fluminense — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Fluminense</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="fluminense">
+        <div class="photo"><img src="images/10-fluminense-modelo-2-2026.jpg" alt="Fluminense — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Fluminense</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="grêmio">
+        <div class="photo"><img src="images/11-gremio-uniforme-1-26-27.jpg" alt="Grêmio — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Grêmio</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="grêmio">
+        <div class="photo"><img src="images/11-gremio-modelo-2-2026.jpg" alt="Grêmio — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Grêmio</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="internacional">
+        <div class="photo"><img src="images/12-internacional-uniforme-1-26-27.jpg" alt="Internacional — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Internacional</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="internacional">
+        <div class="photo"><img src="images/12-internacional-modelo-2-2026.jpg" alt="Internacional — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Internacional</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="mirassol">
+        <div class="photo"><img src="images/13-mirassol-uniforme-1-26-27.jpg" alt="Mirassol — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Mirassol</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="mirassol">
+        <div class="photo"><img src="images/13-mirassol-modelo-2-2026.jpg" alt="Mirassol — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Mirassol</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="palmeiras">
+        <div class="photo"><img src="images/14-palmeiras-uniforme-1-26-27.jpg" alt="Palmeiras — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Palmeiras</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="palmeiras">
+        <div class="photo"><img src="images/14-palmeiras-modelo-2-2026.jpg" alt="Palmeiras — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Palmeiras</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="red bull bragantino">
+        <div class="photo"><img src="images/15-red-bull-bragantino-uniforme-1-26-27.jpg" alt="Red Bull Bragantino — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Red Bull Bragantino</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="red bull bragantino">
+        <div class="photo"><img src="images/15-red-bull-bragantino-modelo-2-2026.jpg" alt="Red Bull Bragantino — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Red Bull Bragantino</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="remo">
+        <div class="photo"><img src="images/16-remo-uniforme-1-26-27.jpg" alt="Remo — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Remo</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="remo">
+        <div class="photo"><img src="images/16-remo-modelo-2-2026.jpg" alt="Remo — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Remo</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="santos">
+        <div class="photo"><img src="images/17-santos-uniforme-1-26-27.jpg" alt="Santos — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Santos</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="santos">
+        <div class="photo"><img src="images/17-santos-modelo-2-2026.jpg" alt="Santos — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Santos</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="são paulo">
+        <div class="photo"><img src="images/18-sao-paulo-uniforme-1-26-27.jpg" alt="São Paulo — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>São Paulo</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="são paulo">
+        <div class="photo"><img src="images/18-sao-paulo-modelo-2-2026.jpg" alt="São Paulo — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>São Paulo</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="vasco">
+        <div class="photo"><img src="images/19-vasco-uniforme-1-26-27.jpg" alt="Vasco — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Vasco</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="vasco">
+        <div class="photo"><img src="images/19-vasco-modelo-2-2026.jpg" alt="Vasco — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Vasco</strong><span>Modelo 2 • 2026</span></div>
+      </article>
+      <article class="card" data-team="vitória">
+        <div class="photo"><img src="images/20-vitoria-uniforme-1-26-27.jpg" alt="Vitória — Uniforme 1" loading="lazy"></div>
+        <div class="info"><strong>Vitória</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="vitória">
+        <div class="photo"><img src="images/20-vitoria-modelo-2-2026.jpg" alt="Vitória — Modelo 2" loading="lazy"></div>
+        <div class="info"><strong>Vitória</strong><span>Modelo 2 • 2026</span></div>
+      </article></div>
+  </section>
+
+  <section id="europeus" class="section">
+    <div class="topline"><h2>Europeus • Catálogo</h2><div class="count">30 camisas • ordem alfabética</div></div>
+    <input class="search" data-search="europeus" placeholder="Pesquisar time...">
+    <div class="grid">
+      <article class="card" data-team="arsenal">
+        <div class="photo"><img src="europeus/01-Arsenal-uniforme-1-26-27.jpg" alt="Arsenal" loading="lazy"></div>
+        <div class="info"><strong>Arsenal</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="aston villa">
+        <div class="photo"><img src="europeus/02-Aston-Villa-uniforme-1-26-27.jpg" alt="Aston Villa" loading="lazy"></div>
+        <div class="info"><strong>Aston Villa</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="atletico de madrid">
+        <div class="photo"><img src="europeus/03-Atletico-de-Madrid-uniforme-1-26-27.jpg" alt="Atletico De Madrid" loading="lazy"></div>
+        <div class="info"><strong>Atletico De Madrid</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="barcelona">
+        <div class="photo"><img src="europeus/04-Barcelona-uniforme-1-26-27.jpg" alt="Barcelona" loading="lazy"></div>
+        <div class="info"><strong>Barcelona</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="bayern de munique">
+        <div class="photo"><img src="europeus/05-Bayern-de-Munique-uniforme-1-26-27.jpg" alt="Bayern De Munique" loading="lazy"></div>
+        <div class="info"><strong>Bayern De Munique</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="borussia dortmund">
+        <div class="photo"><img src="europeus/06-Borussia-Dortmund-uniforme-1-26-27.jpg" alt="Borussia Dortmund" loading="lazy"></div>
+        <div class="info"><strong>Borussia Dortmund</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="club brugge">
+        <div class="photo"><img src="europeus/07-Club-Brugge-uniforme-1-26-27.jpg" alt="Club Brugge" loading="lazy"></div>
+        <div class="info"><strong>Club Brugge</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="como">
+        <div class="photo"><img src="europeus/08-Como-uniforme-1-26-27.jpg" alt="Como" loading="lazy"></div>
+        <div class="info"><strong>Como</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="fenerbahçe">
+        <div class="photo"><img src="europeus/09-Fenerbahce-uniforme-1-26-27.jpg" alt="Fenerbahçe" loading="lazy"></div>
+        <div class="info"><strong>Fenerbahçe</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="feyenoord">
+        <div class="photo"><img src="europeus/10-Feyenoord-uniforme-1-26-27.jpg" alt="Feyenoord" loading="lazy"></div>
+        <div class="info"><strong>Feyenoord</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="galatasaray">
+        <div class="photo"><img src="europeus/11-Galatasaray-uniforme-1-26-27.jpg" alt="Galatasaray" loading="lazy"></div>
+        <div class="info"><strong>Galatasaray</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="hull city">
+        <div class="photo"><img src="europeus/12-Hull-City-uniforme-1-26-27.jpg" alt="Hull City" loading="lazy"></div>
+        <div class="info"><strong>Hull City</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="inter de milao">
+        <div class="photo"><img src="europeus/13-Inter-de-Milao-uniforme-1-26-27.jpg" alt="Inter De Milao" loading="lazy"></div>
+        <div class="info"><strong>Inter De Milao</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="lens">
+        <div class="photo"><img src="europeus/14-Lens-uniforme-1-26-27.jpg" alt="Lens" loading="lazy"></div>
+        <div class="info"><strong>Lens</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="lille">
+        <div class="photo"><img src="europeus/15-Lille-uniforme-1-26-27.jpg" alt="Lille" loading="lazy"></div>
+        <div class="info"><strong>Lille</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="liverpool">
+        <div class="photo"><img src="europeus/16-Liverpool-uniforme-1-26-27.jpg" alt="Liverpool" loading="lazy"></div>
+        <div class="info"><strong>Liverpool</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="manchester city">
+        <div class="photo"><img src="europeus/17-Manchester-City-uniforme-1-26-27.jpg" alt="Manchester City" loading="lazy"></div>
+        <div class="info"><strong>Manchester City</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="manchester united">
+        <div class="photo"><img src="europeus/18-Manchester-United-uniforme-1-26-27.jpg" alt="Manchester United" loading="lazy"></div>
+        <div class="info"><strong>Manchester United</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="napoli">
+        <div class="photo"><img src="europeus/19-Napoli-uniforme-1-26-27.jpg" alt="Napoli" loading="lazy"></div>
+        <div class="info"><strong>Napoli</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="porto">
+        <div class="photo"><img src="europeus/20-Porto-uniforme-1-26-27.jpg" alt="Porto" loading="lazy"></div>
+        <div class="info"><strong>Porto</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="psg">
+        <div class="photo"><img src="europeus/21-PSG-uniforme-1-26-27.jpg" alt="Psg" loading="lazy"></div>
+        <div class="info"><strong>Psg</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="psv eindhoven">
+        <div class="photo"><img src="europeus/22-PSV-Eindhoven-uniforme-1-26-27.jpg" alt="Psv Eindhoven" loading="lazy"></div>
+        <div class="info"><strong>Psv Eindhoven</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="rb leipzig">
+        <div class="photo"><img src="europeus/23-RB-Leipzig-uniforme-1-26-27.jpg" alt="Rb Leipzig" loading="lazy"></div>
+        <div class="info"><strong>Rb Leipzig</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="real betis">
+        <div class="photo"><img src="europeus/24-Real-Betis-uniforme-1-26-27.jpg" alt="Real Betis" loading="lazy"></div>
+        <div class="info"><strong>Real Betis</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="real madrid">
+        <div class="photo"><img src="europeus/25-Real-Madrid-uniforme-1-26-27.jpg" alt="Real Madrid" loading="lazy"></div>
+        <div class="info"><strong>Real Madrid</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="roma">
+        <div class="photo"><img src="europeus/26-Roma-uniforme-1-26-27.jpg" alt="Roma" loading="lazy"></div>
+        <div class="info"><strong>Roma</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="sporting cp">
+        <div class="photo"><img src="europeus/27-Sporting-CP-uniforme-1-26-27.jpg" alt="Sporting Cp" loading="lazy"></div>
+        <div class="info"><strong>Sporting Cp</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="stuttgart">
+        <div class="photo"><img src="europeus/28-Stuttgart-uniforme-1-26-27.jpg" alt="Stuttgart" loading="lazy"></div>
+        <div class="info"><strong>Stuttgart</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="viking">
+        <div class="photo"><img src="europeus/29-Viking-uniforme-1-26-27.jpg" alt="Viking" loading="lazy"></div>
+        <div class="info"><strong>Viking</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article>
+      <article class="card" data-team="villarreal">
+        <div class="photo"><img src="europeus/30-Villarreal-uniforme-1-26-27.jpg" alt="Villarreal" loading="lazy"></div>
+        <div class="info"><strong>Villarreal</strong><span>Uniforme 1 • 2026/27</span></div>
+      </article></div>
+  </section>
+</main>
+
+<footer>MANTO STORE • Catálogo 2026/27</footer>
+
+<script>
+document.querySelectorAll('.tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.target).classList.add('active');
+  });
+});
+document.querySelectorAll('.search').forEach(input => {
+  input.addEventListener('input', () => {
+    const section = document.getElementById(input.dataset.search);
+    const q = input.value.toLowerCase().trim();
+    section.querySelectorAll('.card').forEach(card => {
+      card.style.display = card.dataset.team.includes(q) ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>
